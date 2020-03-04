@@ -1,0 +1,1 @@
+xe sr-create name-label=Local_Storage_ISO type=iso device-config:location=/home/Local_Storage_ISO device-config:legacy_mode=true content-type=iso
