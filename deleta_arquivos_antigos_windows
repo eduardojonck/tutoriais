@@ -1,0 +1,16 @@
+Muitas vezes precisamos rotacionar arquivos por datas e para isso pode ser feito com um script em VBS conforme abaixo.
+
+Basta alterar o diretório e os dias de retenção dos arquivos.
+
+Crie um arquivo e deixe o mesmo com a extensão .vbs e adicione os dados abaixo:
+
+set FSo = CreateObject("Scripting.FileSystemObject")
+set folder = FSO.getFolder ("C:\Users\Eduardo Jonck\Desktop\teste")
+for each file in folder.files
+if (dateDiff("d", file.DateLastModified, now) >1) then
+File.delete
+end if
+next
+
+Pasta a ser rotacionado arquivos: C:\Users\Eduardo Jonck\Desktop\teste
+Dias que os arquivos serão permanecidos: >1
